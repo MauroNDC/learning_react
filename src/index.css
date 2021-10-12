@@ -1,3 +1,12 @@
+/*--Variables de colores--*/
+:root{
+  --marine-blue: #2D3142;
+  --blue-gray: #4F5D75;
+  --gray: #BFC0C0;
+  --orange: #EF8354;
+  --light-orange: #e9c8ba;
+}
+/*--Fin Variable de colores--*/
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +20,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*----Estilos del header----*/
+.nav-item{
+  margin-left: 2rem;
+}
+
+.nav-link{
+  padding: 10px !important;
+  border-radius: 4px;
+  transition: 1s !important;
+}
+
+.nav-link:hover{
+  background-color: black;
+}
+
+.icon-img{
+  margin-left: 3rem;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.navbar-brand h4{
+  margin-left: 1rem;
+}
+
+.navbar{
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: var(--marine-blue) !important;
+  height: 5.5rem;
+}
+/*--Botón del CartWidget--*/
+.cart-button{
+  position: absolute;
+  right: 1rem;
+  bottom: 1.5rem;
+  padding: 5px;
+  border-radius: 4px;
+  transition: 1s;
+}
+
+.cart-button:hover{
+  background-color: black;
+}
+
+.cart-button svg{
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+/*--Fin del CartWidget--*/
+
+/*----Fin de estilos del header----*/
