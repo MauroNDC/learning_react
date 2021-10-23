@@ -11,18 +11,18 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarText">
-                <ul className="navbar-nav mr-auto">
-                  <li className="nav-item active ml-8">
-                    <a className="nav-link" href="/">Inicio</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">Compras</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">Contacto</a>
-                  </li>
-                </ul>
-                <CartWidget/>
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active ml-8">
+                <a className="nav-link" href="/">Inicio</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Compras</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Contacto</a>
+              </li>
+            </ul>
+            <CartWidget/>
           </div>
         </nav>
       </header>
