@@ -2,10 +2,10 @@ import React from 'react'
 
 const ItemDetail = ({pictureUrl, title, description, price}) => 
     <section className="mb-5">
-       <div className="card mb-3" style={{maxWidth: '1480px'}}>
+       <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={pictureUrl} className="img-fluid rounded-start" alt="..." />
+                    <img src={pictureUrl} className="" alt="Imagen del producto" />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
