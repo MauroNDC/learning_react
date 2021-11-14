@@ -11,14 +11,14 @@ const ItemDetailContainer = () => {
         const getItems = () =>  new Promise (resolve => {
             setTimeout(() => resolve(
                 [
-                    {id:'0', title:'Pinza', description: 'Es una pinza', price: 400, pictureUrl: 'IMG/pinza.jpg'},
-                    {id:'1', title:'Alicate', description: 'Es una alicate', price: 350, pictureUrl: '/alicate.jpg'},
-                    {id:'2', title:'Martillo', description: 'Es una martillo', price: 450, pictureUrl: '/martillo.jpg'},
-                    {id:'3', title:'Destornillador', description: 'Es una destornillador', price: 300, pictureUrl: '/destornillador.jpg'},
-                    {id:'4', title:'Taladro', description: 'Es un taladro', price: 10000, pictureUrl: '/taladro.jpg'},
-                    {id:'5', title:'Moladora', description: 'Es una moladora', price: 12000, pictureUrl: '/moladora.jpg'}
+                    {id:'0', title:'Pinza', description: 'Es una pinza', price: 400, pictureUrl: '/IMG/pinza.jpg'},
+                    {id:'1', title:'Alicate', description: 'Es una alicate', price: 350, pictureUrl: '/IMG/alicate.jpg'},
+                    {id:'2', title:'Martillo', description: 'Es una martillo', price: 450, pictureUrl: '/IMG/martillo.jpg'},
+                    {id:'3', title:'Destornillador', description: 'Es una destornillador', price: 300, pictureUrl: '/IMG/destornillador.jpg'},
+                    {id:'4', title:'Taladro', description: 'Es un taladro', price: 10000, pictureUrl: '/IMG/taladro.jpg'},
+                    {id:'5', title:'Moladora', description: 'Es una moladora', price: 12000, pictureUrl: '/IMG/moladora.jpg'}
                 ]
-            ), 2000);
+            ), 0);
         });
 
         getItems().then(res => {

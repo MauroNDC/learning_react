@@ -89,6 +89,22 @@ code {
   background-color: var(--gray);
 }
 
+.item-detail {
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  width: max-content;
+}
+
+.item-detail img {
+  border-color: var(--orange);
+}
+
+.item-detail {
+  
+}
+
 .btn-primary{
   background-color: var(--blue-gray) !important;
   border-color: var(--blue-gray) !important;

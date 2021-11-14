@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartWidget from './components/CartWidget';
 import ItemDetailContainer from './components/container/ItemDetailContainer';
 
-const App = () => 
+const App = () =>
+  <>
     <BrowserRouter>
       <NavBar />
       <Routes>
@@ -15,6 +16,10 @@ const App = () =>
         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
       </Routes>
     </BrowserRouter>
+    <ShopContext.Provider value={[]}>
+
+    </ShopContext.Provider>
+  </>
     
 export default App;
 
