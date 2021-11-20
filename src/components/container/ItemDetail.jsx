@@ -8,9 +8,9 @@ const ItemDetail = ({id, pictureUrl, title, description, price, stock}) => {
 
     const {adding} = useContext(ShopCartContext);
 
-    const addingItem = (props) => {
+    const addingItem = (cantidad) => {
         setBuy(true);
-        adding({id, title, price}, props.cantidad);
+        adding({id, title, price}, cantidad);
     }
 
     return(
