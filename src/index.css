@@ -90,20 +90,22 @@ code {
 }
 
 .item-detail {
-  align-items: center;
   text-align: center;
   margin-top: 2rem;
-  margin-left: 10rem;
   width: max-content;
 }
 
 .item-detail img {
   border-color: var(--orange);
+  margin-left: 5rem;
 }
 
-.item-detail {
-  
+/*-Item Count-*/
+.detail-cart-button {
+  margin-top: 1rem;
 }
+
+/*-Fin Item Count-*/
 
 .btn-primary{
   background-color: var(--blue-gray) !important;

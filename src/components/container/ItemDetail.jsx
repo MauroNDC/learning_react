@@ -1,24 +1,37 @@
-import React from 'react' 
-import { Link } from 'react-router-dom'
+import React, {useState, useContext} from 'react' ;
+import { Link } from 'react-router-dom';
+import CartContext, { ShopCartContext } from '../../context/CartContext';
+import ItemCount from '../ItemCount';
 
-const ItemDetail = ({pictureUrl, title, description, price}) => 
+const ItemDetail = ({id, pictureUrl, title, description, price, stock}) => {
+    const [buy, setBuy] = useState(false);
+
+    const {adding} = useContext(ShopCartContext);
+
+    const addingItem = (props) => {
+        setBuy(true);
+        adding({id, title, price}, props.cantidad);
+    }
+
+    return(
     <section className="mb-5">
-       <div className="card mb-3 item-detail">
+       <div className="card mb-3 item-detail col-xl-12 ml-0 mr-4">
             <div className="row g-0 card-mod">
-                <div className="col-md-4">
+                <div className="col-md-5 border">
                     <img src={pictureUrl} className="img-fluid rounded-start" alt="Imagen del producto" />
                 </div>
-                <div className="col-md-8 card-body-mod">
+                <div className="col-md-6 card-body-mod">   
                     <div className="card-body">
                         <h4 className="card-title item-title">{title}</h4>
                         <p className="card-text item-desc">{description}</p>
                         <p><strong>$ {price}</strong></p>
-                        <Link to= {"/"} className="btn btn-primary"> Agregar al Carrito</Link>
+                        <div>
+                            {!buy? <ItemCount stock={stock} addItem={addingItem} /> : <Link to={'/cart'}>Terminar compra</Link>}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
+)}
 export default ItemDetail;
