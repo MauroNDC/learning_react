@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ItemDetail from './ItemDetail';
 import {useParams} from 'react-router-dom';
-import CartContext from '../../context/CartContext';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
@@ -29,9 +28,7 @@ const ItemDetailContainer = () => {
         });
     }, [itemId]);
     return(
-        //<ShopCartContext.Provider>
             <ItemDetail key={item.id} id={item.id} pictureUrl={item.pictureUrl} title={item.title} description={item.description} price={item.price} item={item} stock={item.stock}/>
-        //</ShopCartContext.Provider>
     )
 }
 

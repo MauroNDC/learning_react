@@ -86,7 +86,7 @@ code {
 .item-card{
   margin-left: 2rem;
   text-align: center;
-  background-color: var(--gray);
+  text-decoration: none;
 }
 
 .item-detail {
@@ -123,3 +123,14 @@ code {
 /*--Fin de los estilos en el container--*/
 
 /*----Fin de estilos del header----*/
+
+/*--Estilos en el Carrito--*/
+.shop-cart {
+  text-align: center;
+}
+
+.cart-mini-img {
+  width: 100px;
+  height: 100px;
+}
+/*--Fin estilos en el carrito--*/

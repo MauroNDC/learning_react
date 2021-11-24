@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Prev } from 'react-bootstrap/esm/PageItem';
 
 const ItemCount = (props) => {
     const [stock, setStock] = useState(props.stock);

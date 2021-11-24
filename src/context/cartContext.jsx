@@ -10,9 +10,9 @@ const CartContext = ({children}) => {
     const adding = (item, qty) => {
         const inCart = cart.find(it => it.id === item.id)
         if (!inCart){
-            setCart([...cart, {id: item.id, title: item.title, precio: item.price, cantidad: qty, subTotal: (item.price*qty)}])
+            setCart([...cart, {id: item.id, title: item.title, image: item.pictureUrl, precio: item.price, cantidad: qty, subTotal: (item.price*qty)}])
             setTotal(total+(item.price*qty))
-            console.log(total)
+            console.log(cart.image)
             setCantidad(cantidad+1)
         } else {
             const cartAux = cart.map((i) => {
@@ -29,7 +29,7 @@ const CartContext = ({children}) => {
     }
 
     return(
-        <ShopCartContext.Provider value={{cart, cantidad, total, adding}}>
+        <ShopCartContext.Provider value={{cart, total, adding}}>
             {children}
         </ShopCartContext.Provider>
     )
