@@ -1,39 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import ItemList from './ItemList';
+import db from '../../firebase/firebase';
+import {collection, getDocs} from 'firebase/firestore';
 
 const ItemListContainer = ({brand}) => {
     //Lista de items
     const [items, setItems] = useState([]);
 
-    const getItems = () => new Promise (resolve => {
-            setTimeout(() => resolve(
-                [
-                    {id:0, title:'Pinza', description: 'Es una pinza', price: 400, pictureUrl: 'IMG/pinza.jpg'},
-                    {id:1, title:'Alicate', description: 'Es una alicate', price: 350, pictureUrl: 'IMG/alicate.jpg'},
-                    {id:2, title:'Martillo', description: 'Es una martillo', price: 450, pictureUrl: 'IMG/martillo.jpg'},
-                    {id:3, title:'Destornillador', description: 'Es una destornillador', price: 300, pictureUrl: 'IMG/destornillador.jpg'},
-                    {id:4, title:'Taladro', description: 'Es un taladro', price: 10000, pictureUrl: 'IMG/taladro.jpg'},
-                    {id:5, title:'Moladora', description: 'Es una moladora', price: 12000, pictureUrl: 'IMG/moladora.jpg'}
-                ]
-            ), 0);
-        });
-
     useEffect(() => {
-        getItems().then(res => setItems(res))
-        .catch(res => {alert('Error al tratar de renderizar los productos')})
-    }, []);
+        const myItems = collection(db, 'items');
 
-    /*
-    useEffect( ()  => {
-        async function getData(){
-            try{
-                setItems(await getItems()) 
-            }catch{
-                alert('Error')
-            }
-        }
-        getData();
-    } )*/
+        getDocs(myItems).then(res => {
+            const results = res.docs.map(doc => {
+                return {...doc.data(), id: doc.id};
+            });
+            setItems(results);
+        })
+    }, []);
 
     return (
         <>

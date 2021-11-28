@@ -4,21 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyCTrH9WceCymg1dp4kRQZoAcztZyeae3kk",
-  authDomain: "jewel-tools.firebaseapp.com",
-  projectId: "jewel-tools",
-  storageBucket: "jewel-tools.appspot.com",
-  messagingSenderId: "488715671288",
-  appId: "1:488715671288:web:631e447162e350778b4d0d"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
 ReactDOM.render(
     <App />,

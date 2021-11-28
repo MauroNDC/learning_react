@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Item = ({id, pictureUrl, title, description, price}) => 
-            <Link to={`item/${id}`}><div className="card item-card d-inline-block items">
+            <Link to={`item/${id}`}>
+                <div className="card item-card d-inline-block items">
                     <img src={pictureUrl} className="card-img-top img-thumbnail" alt="Imagen del producto" />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>

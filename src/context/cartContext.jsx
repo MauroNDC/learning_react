@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 
 const ShopCartContext = React.createContext([]);
 
-/* Tengo un error que cuando apreto el botón de eliminar item si tengo más de 1 item no se me actualiza del todo el total.
-y hay otro error en cuando toco el + y - se me guardan las cantidades, y no la cantidad que tengo en el input al apretar el botón de "agregar al carrito" */
-
 const CartContext = ({children}) => {
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)

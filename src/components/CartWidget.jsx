@@ -4,7 +4,6 @@ import { ShopCartContext } from '../context/CartContext';
 
 const CartWidget = () => {
   const {cant} = useContext(ShopCartContext);
-  console.log(cant)
 
   return (
     <>
