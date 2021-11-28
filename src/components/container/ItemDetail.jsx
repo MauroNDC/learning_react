@@ -26,7 +26,7 @@ const ItemDetail = ({id, pictureUrl, title, description, price, stock}) => {
                         <p className="card-text item-desc">{description}</p>
                         <p><strong>$ {price}</strong></p>
                         <div>
-                            {!buy? <ItemCount stock={stock} addItem={addingItem} /> : <Link to={'/cart'}>Terminar compra</Link>}
+                            {!buy? <ItemCount stock={stock} addItem={addingItem} /> : <Link to={'/cart'} className="btn btn-primary">Terminar compra</Link>}
                         </div>
                     </div>
                 </div>

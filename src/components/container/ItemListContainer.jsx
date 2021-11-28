@@ -15,7 +15,7 @@ const ItemListContainer = ({brand}) => {
                     {id:4, title:'Taladro', description: 'Es un taladro', price: 10000, pictureUrl: 'IMG/taladro.jpg'},
                     {id:5, title:'Moladora', description: 'Es una moladora', price: 12000, pictureUrl: 'IMG/moladora.jpg'}
                 ]
-            ), 2000);
+            ), 0);
         });
 
     useEffect(() => {
