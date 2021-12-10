@@ -1,10 +1,26 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
+import {Link} from 'react-router-dom'
 import { ShopCartContext } from '../../context/CartContext';
 import CartItem from './CartItem';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const Cart = () => {
     const {cart, total, removeItem, changeQty} = useContext(ShopCartContext)
+    const [userInfo, setUserInfo] = useState();
     console.log(cart);
+    /*
+    const db = getFirestore();
+    const orders = db.collection('orders');
+    const newOrder = {
+        buyer: userInfo,
+        items: cart,
+        total: total
+    }*/
+
+    const buying = () => {
+        return
+    }
 
     return(
         <div className="container">
@@ -25,7 +41,13 @@ const Cart = () => {
                     </li>
                 </ul>
             </div>
-
+            {cart.length === 0 ?
+                <></>
+                :
+                <div className='finish'>
+                    <Link to={"/buying"} className="btn btn-primary col-lg-1 col-xl-1 finish-btn" onClick={buying}>Finalizar compra</Link>
+                </div>
+            }
         </div>
     )
 }

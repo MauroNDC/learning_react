@@ -23,7 +23,7 @@ code {
 
 /*----Estilos del header----*/
 .nav-item{
-  margin-left: 2rem;
+  
 }
 
 .nav-link{
@@ -50,11 +50,12 @@ code {
   padding-top: 0;
   padding-bottom: 0;
   background-color: var(--marine-blue) !important;
-  height: 5.5rem;
+  width: 100% !important;
 }
 /*--Botón del CartWidget--*/
 .cart-button{
   position: absolute;
+  top: 2rem;
   right: 1rem;
   border-radius: 4px;
   transition: 1s;
@@ -92,6 +93,7 @@ code {
 .item-list{
   text-align: center;
   margin-top: 5rem;
+  padding-bottom: 6rem;
 }
 
 .item-list h2{
@@ -100,8 +102,10 @@ code {
 
 .item-card{
   margin-left: 2rem;
+  margin-right: 2rem;
   text-align: center;
   text-decoration: none;
+  margin-top: 2rem;
 }
 
 .item-detail {
@@ -113,6 +117,17 @@ code {
 .item-detail img {
   border-color: var(--orange);
   margin-left: 5rem;
+}
+
+.cat-filter {
+  margin-left: 100px;
+  height: 40px;
+  margin-top: 40px !important;
+}
+
+.sub-title {
+  text-align: center;
+  margin-top: 20px !important; 
 }
 
 /*-Item Count-*/
@@ -149,4 +164,49 @@ code {
   height: 8rem;
 }
 
+.finish {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 /*--Fin estilos en el carrito--*/
+
+/*--WhatsApp Button--*/
+.whatsapp-btn img {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  text-align: center;
+  border-radius: 50px;
+  z-index: 100;
+}
+/*--fin WhatsApp Button--*/
+
+/*--Estilos en Contact--*/
+.contact-form {
+
+}
+/*--Fin de Estilos en contact--*/
+
+/*--Estilos en el footer--*/
+.footer {
+  padding: 8px;
+  background-color: var(--marine-blue);
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer label {
+  color: white;
+}
+
+.footer-form {
+  text-align: center;
+  justify-content: center;
+}
+/*--fin Estilos en el footer--*/
