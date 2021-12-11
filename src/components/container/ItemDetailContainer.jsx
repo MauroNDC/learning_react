@@ -14,7 +14,6 @@ const ItemDetailContainer = () => {
 
         getDoc(myItem).then(res => {
             const result = { id: res.id, ...res.data() };
-            console.log(result)
             setItem(result);
         });
     }, [itemId]);

@@ -34,8 +34,8 @@ const ItemListContainer = ({brand}) => {
                 <h2 className="sub-title">Lista de Herramientas</h2>
             </div>
             <div className="row">
-                    <select className="cat-filter col-xl-2 col-lg-2" defaultValue={"todos"} name="catFilter" id="catFilter" onChange={filtering}>
-                        <option value="todos" selected>Todas</option>
+                    <select className="cat-filter col-xl-2 col-lg-2" value={cat} name="catFilter" id="catFilter" onChange={filtering}>
+                        <option value="todos">Todas</option>
                         <option value="manual">Herramientas manuales</option>
                         <option value="electrica">Herramientas eléctricas</option>
                     </select>
