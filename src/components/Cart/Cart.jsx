@@ -25,6 +25,7 @@ const Cart = () => {
                     </li>
                 </ul>
             </div>
+            <Link to={"/"} className="btn col-lg-1 col-xl-1" >← Volver a la lista de items</Link>
             {cart.length === 0 ?
                 <></>
                 :

@@ -9,6 +9,7 @@ import Contact from './components/pages/Contact';
 import WhatsappWidget from './components/littleComponents/WhatsappWidget'
 import Footer from './components/Footer';
 import BuyingForm from './components/Cart/BuyingForm';
+import AboutUs from './components/pages/aboutus';
 
 const App = () =>
   <>
@@ -21,6 +22,7 @@ const App = () =>
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="/contact" element={<Contact />}/>
           <Route path="/buying" element={<BuyingForm />} />
+          <Route path="/aboutus" element={<AboutUs /> } />
         </Routes>
         <Footer />
       </CartContext>

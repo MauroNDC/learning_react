@@ -212,11 +212,44 @@ code {
 }
 /*--fin WhatsApp Button--*/
 
-/*--Estilos en Contact--*/
-.contact-form {
 
+/*--Estilos en el Contact--*/
+.contact-form-parent {
+  text-align: center;
+  width: 10rem;
 }
-/*--Fin de Estilos en contact--*/
+
+.contact-form {
+  display: inline-block;
+  width: 20rem;
+}
+
+.contact-form-parent .form-group div{
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+.contact-form-parent h2 {
+  color: var(--orange);
+  margin-top: 1.5rem;
+}
+/*--Estilos en el Contact--*/
+
+/*--Estilos en About Us--*/
+
+.about-us h2 {
+  color: var(--orange);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-us p {
+  text-align: justify;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+/*--fin de estilos en About Us--*/
 
 /*--Estilos en el footer--*/
 .footer {

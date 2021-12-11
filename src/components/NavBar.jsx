@@ -16,7 +16,7 @@ const NavBar = () => {
                   <NavLink className="nav-link" to={"/contact"}>Contacto</NavLink>
                 </li>
                 <li className="nav-item ml-8 active">
-                  <NavLink className="nav-link" to={"/contact"}>Sobre Nosotros</NavLink>
+                  <NavLink className="nav-link" to={"/aboutus"}>Sobre Nosotros</NavLink>
                 </li>
               </ul>
               <CartWidget/>
